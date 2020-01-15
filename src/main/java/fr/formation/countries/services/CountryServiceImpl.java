@@ -31,7 +31,6 @@ public class CountryServiceImpl implements CountryService {
 	    Region region = saveAndGet(response.getRegion());
 	    Country country = new Country(response.getNativeName(),
 		    response.getAlpha2Code(), region, response.getFlag());
-	    System.out.println("Hi, api resoinse: " + country);
 	    countryRepo.save(country);
 	    return countryRepo.findByAlpha2Code(code);
 	}
