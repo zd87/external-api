@@ -50,8 +50,7 @@ public class CountryServiceImpl implements CountryService {
 	// regionRepo.saveIfDoesntExist(name);
 	Region region = regionRepo.findByName(name);
 	if (region == null) {
-	    Region savingRegion = new Region(name);
-	    regionRepo.save(savingRegion);
+	    regionRepo.save(new Region(name));
 	    region = regionRepo.findByName(name);
 	}
 	return region;
