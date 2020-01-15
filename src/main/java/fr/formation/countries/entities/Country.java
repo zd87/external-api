@@ -8,7 +8,7 @@ import javax.persistence.ManyToOne;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
-@JsonIgnoreProperties(ignoreUnknown = true, value = { "id" })
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Country extends AbstractId {
 
     @Column(length = 255, nullable = false)
